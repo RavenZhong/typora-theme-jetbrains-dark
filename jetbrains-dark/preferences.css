@@ -1,0 +1,260 @@
+/*
+ * Preferences is a separate React document. Typora loads the user theme
+ * before its own Preferences stylesheet, so these scoped selectors use
+ * enough specificity to override the later light defaults.
+ */
+
+.ty-preferences,
+.ty-preferences .window,
+.ty-preferences .window-content,
+.ty-preferences .pane-group,
+.ty-preferences .pane,
+.ty-preferences .content {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.ty-preferences .sidebar {
+    color: var(--control-text-color);
+    background: var(--side-bar-bg-color);
+    border-color: var(--border-color-strong);
+}
+
+.ty-preferences .window-header {
+    color: var(--text-color);
+    background: var(--side-bar-bg-color);
+    border-bottom: 1px solid var(--border-color-strong);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.36);
+}
+
+.ty-preferences .window-header h2,
+.ty-preferences .window-header button,
+.ty-preferences .window-header .icon {
+    color: var(--text-color);
+}
+
+.ty-preferences .window-header button:hover,
+.ty-preferences .window-header button:focus {
+    color: var(--link-color);
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences .window-header-back .icon {
+    border-color: var(--border-color-strong);
+}
+
+.ty-preferences .nav-group-title {
+    color: var(--text-color-muted);
+}
+
+.ty-preferences .nav-group-item {
+    color: var(--control-text-color);
+}
+
+.ty-preferences .nav-group-item:hover {
+    color: var(--control-text-hover-color);
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences .nav-group-item:active,
+.ty-preferences .nav-group-item.active {
+    color: var(--active-file-text-color);
+    background: var(--active-file-bg-color);
+}
+
+.ty-preferences .nav-group-item .icon {
+    color: inherit;
+    fill: currentColor;
+}
+
+.ty-preferences input,
+.ty-preferences select,
+.ty-preferences textarea,
+.ty-preferences .form-control,
+.ty-preferences .search-input,
+.ty-preferences .dir-path {
+    color: var(--text-color);
+    background: var(--code-bg-color);
+    border: 1px solid var(--border-color-strong);
+    box-shadow: none;
+}
+
+.ty-preferences input::placeholder,
+.ty-preferences textarea::placeholder {
+    color: var(--text-color-muted);
+    opacity: 0.8;
+}
+
+.ty-preferences input:focus,
+.ty-preferences select:focus,
+.ty-preferences textarea:focus,
+.ty-preferences .form-control:focus,
+.ty-preferences .search-input:focus,
+.ty-preferences .dir-path:focus {
+    border-color: var(--focus-ring-color);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--focus-ring-color);
+}
+
+.ty-preferences option,
+.ty-preferences optgroup {
+    color: var(--text-color);
+    background: var(--surface-color);
+}
+
+.ty-preferences input[type="checkbox"],
+.ty-preferences input[type="radio"] {
+    accent-color: var(--primary-color);
+}
+
+.ty-preferences input:disabled,
+.ty-preferences select:disabled,
+.ty-preferences textarea:disabled,
+.ty-preferences .disabled,
+.ty-preferences .button-disabled {
+    color: var(--text-color-muted);
+    opacity: 0.55;
+}
+
+.ty-preferences .btn,
+.ty-preferences .btn-default {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color-strong);
+    box-shadow: none;
+}
+
+.ty-preferences .btn-default:hover,
+.ty-preferences .btn-default:focus,
+.ty-preferences .btn-default:active {
+    color: var(--item-hover-text-color);
+    background: var(--item-hover-bg-color);
+    border-color: var(--focus-ring-color);
+}
+
+.ty-preferences .btn-primary,
+.ty-preferences .btn-positive {
+    color: var(--primary-btn-text-color);
+    background: var(--primary-color);
+    border-color: var(--primary-btn-border-color);
+}
+
+.ty-preferences .btn-primary:hover,
+.ty-preferences .btn-positive:hover {
+    color: #ffffff;
+    background: var(--link-hover-color);
+}
+
+.ty-preferences .btn-negative {
+    color: #ffffff;
+    background: var(--code-invalid);
+    border-color: var(--code-invalid);
+}
+
+.ty-preferences table,
+.ty-preferences thead,
+.ty-preferences tbody,
+.ty-preferences tr,
+.ty-preferences th,
+.ty-preferences td {
+    color: var(--text-color);
+    background: transparent;
+    border-color: var(--table-border-color);
+}
+
+.ty-preferences thead,
+.ty-preferences .table-striped tr:nth-child(even) {
+    background: var(--surface-color);
+}
+
+.ty-preferences .separator {
+    border-color: var(--border-color-strong);
+}
+
+.ty-preferences .dropdown-menu,
+.ty-preferences .input-autocomplete {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.36);
+}
+
+.ty-preferences .dropdown-menu li:hover,
+.ty-preferences .input-autocomplete-row:hover {
+    color: var(--item-hover-text-color);
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences .input-autocomplete-row.active {
+    color: var(--active-file-text-color);
+    background: var(--active-file-bg-color);
+}
+
+.ty-preferences .export-items-list,
+.ty-preferences .export-items-list-control,
+.ty-preferences .export-detail,
+.ty-preferences .export-item.active,
+.ty-preferences.light .export-items-list-control,
+.ty-preferences.light .export-detail,
+.ty-preferences.light .export-item.active {
+    color: var(--active-file-text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+}
+
+.ty-preferences .export-item:hover {
+    color: var(--item-hover-text-color);
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences .export-item.active {
+    background: var(--active-file-bg-color);
+}
+
+.ty-preferences .modal-backdrop {
+    background: rgba(0, 0, 0, 0.72);
+}
+
+.ty-preferences .modal-content {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.48);
+}
+
+.ty-preferences .modal-title,
+.ty-preferences .modal-footer {
+    border-color: var(--border-color-strong);
+}
+
+.ty-preferences .panel-content-hint,
+.ty-preferences .inline-hint,
+.ty-preferences .label-hint,
+.ty-preferences .input-group-header-hint {
+    color: var(--text-color-muted);
+}
+
+.ty-preferences .warning-panel {
+    color: #f0c36a;
+    background: rgba(210, 153, 34, 0.16);
+    border: 1px solid rgba(210, 153, 34, 0.42);
+}
+
+.ty-preferences .search-hit {
+    color: var(--search-select-text-color);
+    background: var(--search-select-bg-color);
+}
+
+.ty-preferences ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ty-preferences ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    background-clip: padding-box;
+}
+
+.ty-preferences ::-webkit-scrollbar-thumb:hover,
+.ty-preferences ::-webkit-scrollbar-thumb:active {
+    background: var(--scrollbar-thumb-hover-color);
+}

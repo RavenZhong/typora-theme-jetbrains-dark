@@ -1,0 +1,156 @@
+/*
+ * File tree, file list, outline and sidebar controls.
+ */
+
+#typora-sidebar,
+.sidebar-content,
+.sidebar-content-content,
+.sidebar-footer {
+    color: var(--control-text-color);
+    background: var(--side-bar-bg-color);
+    border-color: var(--border-color-strong);
+}
+
+#typora-sidebar {
+    border-right: 1px solid var(--border-color-strong);
+    box-shadow: none;
+}
+
+.sidebar-tabs,
+.info-panel-tab-wrapper {
+    color: var(--control-text-color);
+    background: var(--side-bar-bg-color);
+    border-color: var(--border-color-strong);
+}
+
+.info-panel-tab:hover,
+.outline-title-wrapper .btn:hover {
+    color: var(--control-text-hover-color);
+    background: var(--item-hover-bg-color);
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: var(--active-file-text-color);
+}
+
+.file-library-node:not(.active):hover > .file-node-background,
+.file-tree-node:not(.active):hover > .file-node-background,
+.file-list-item:not(.active):hover {
+    background: var(--item-hover-bg-color);
+}
+
+.file-library-node.active > .file-node-background,
+.file-tree-node.active > .file-node-background,
+.file-list-item.active {
+    color: var(--active-file-text-color);
+    background: var(--active-file-bg-color);
+}
+
+.file-library-node.active > .file-node-content,
+.file-tree-node.active > .file-node-content,
+.file-list-item.active,
+.file-list-item.active .file-list-item-file-name {
+    color: var(--active-file-text-color);
+}
+
+.file-node-content,
+.file-list-item,
+.outline-label {
+    color: var(--control-text-color);
+}
+
+.file-node-content:hover,
+.file-list-item:hover,
+.outline-item:hover {
+    color: var(--control-text-hover-color);
+}
+
+.file-list-item-file-name,
+.file-node-title {
+    color: inherit;
+}
+
+.file-list-item-parent-loc,
+.file-list-item-summary,
+.file-list-item-time,
+#sidebar-loading-template,
+#sidebar-loading-template.file-list-item {
+    color: var(--text-color-muted);
+    opacity: 1;
+}
+
+.outline-title-wrapper .btn {
+    color: var(--control-text-color);
+}
+
+.outline-item:hover {
+    color: var(--item-hover-text-color);
+    background: var(--item-hover-bg-color);
+    border-color: var(--item-hover-bg-color);
+}
+
+.outline-item-active > .outline-item,
+.outline-item-active > .outline-item .outline-label {
+    color: var(--active-file-text-color);
+}
+
+.outline-expander:before,
+.file-node-open-state,
+.file-node-icon {
+    color: var(--control-text-color);
+}
+
+.ty-sidebar-search-panel {
+    background: var(--side-bar-bg-color);
+    border-color: var(--border-color-strong);
+}
+
+#file-library-search-input {
+    color: var(--text-color);
+    background: var(--code-bg-color);
+    border: 1px solid var(--border-color-strong);
+}
+
+#file-library-search-input:focus {
+    border-color: var(--focus-ring-color);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--focus-ring-color);
+}
+
+.sidebar-footer {
+    border-top: 1px solid var(--border-color-strong);
+}
+
+.sidebar-footer-item,
+.ty-side-sort-btn {
+    color: var(--control-text-color);
+}
+
+.sidebar-footer-item:hover,
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: var(--control-text-hover-color);
+    background: var(--item-hover-bg-color);
+}
+
+#sidebar-files-menu {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-color: var(--border-color-strong);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: var(--scrollbar-thumb-color);
+}
+
+.file-node-expanded > .file-node-children {
+    display: grid;
+}
