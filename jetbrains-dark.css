@@ -2,6 +2,11 @@
  * Typora Theme: jetbrains-dark
  */
 
+@import "jetbrains-dark/shell.css";
+@import "jetbrains-dark/sidebar.css";
+@import "jetbrains-dark/preferences.css";
+@import "jetbrains-dark/editor-extras.css";
+
 :root {
     /* Core */
     --bg-color: #191a1c;
@@ -15,10 +20,15 @@
     --control-text-color: #9ea0a8;
     --control-text-hover-color: #dfe1e5;
     --item-hover-bg-color: #393b40;
+    --item-hover-text-color: #dfe1e5;
     --active-file-bg-color: #2e436e;
     --active-file-border-color: #3574f0;
     --active-file-text-color: #dfe1e5;
     --window-border: 1px solid #42454a;
+    --window-border-color: #42454a;
+    --panel-border-color: #42454a;
+    --active-toggle-btn-color: #dfe1e5;
+    --side-bar-menu-active-tint: #3574f0;
     --rawblock-edit-panel-bd: #2b2d30;
 
     /* Accents */
@@ -26,7 +36,12 @@
     --link-color: #57a8f5;
     --link-hover-color: #5c92ff;
     --select-text-bg-color: #214283;
+    --select-text-font-color: #dfe1e5;
     --search-select-bg-color: #214283;
+    --search-select-text-color: #ffffff;
+    --focus-ring-color: #3574f0;
+    --primary-btn-border-color: #3574f0;
+    --primary-btn-text-color: #ffffff;
 
     /* Surfaces / Borders */
     --surface-color: #2b2d30;
@@ -34,6 +49,9 @@
     --surface-active-color: #42454a;
     --border-color: #393b40;
     --border-color-strong: #42454a;
+    --table-border-color: #42454a;
+    --color-popover-bg-color: #2b2d30;
+    --drag-placeholder-color: #6d9cbe;
     --hr-color: #393b40;
     --scrollbar-thumb-color: #444447;
     --scrollbar-thumb-hover-color: #4e4e50;
@@ -65,6 +83,7 @@
     --code-invalid: #f75464;
 
     /* Misc */
+    --md-char-color: #9ea0a8;
     --heading-char-color: #9ea0a8;
     --meta-content-color: #6d9cbe;
     --mermaid-theme: dark;

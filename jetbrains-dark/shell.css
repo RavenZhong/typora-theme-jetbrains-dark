@@ -1,0 +1,322 @@
+/*
+ * Typora application shell: title bar, mega menu, menus, dialogs and
+ * transient panels. All colors resolve through the palette in the entry CSS.
+ */
+
+#top-titlebar,
+#top-titlebar *,
+header,
+footer {
+    color: var(--control-text-color);
+}
+
+#top-titlebar header:hover .title-text,
+#top-titlebar .toolbar-icon.btn:hover,
+#top-titlebar .toolbar-icon.btn.hover {
+    color: var(--control-text-hover-color);
+}
+
+#top-titlebar .toolbar-icon.btn:hover,
+#top-titlebar .toolbar-icon.btn.hover,
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: var(--item-hover-bg-color);
+}
+
+#w-unpin {
+    background-color: var(--active-file-bg-color);
+}
+
+.megamenu-content,
+.megamenu-menu-section,
+.megamenu-opened header {
+    background: var(--bg-color);
+    background-image: none;
+    color: var(--text-color);
+}
+
+.megamenu-menu {
+    background: var(--side-bar-bg-color);
+    color: var(--text-color);
+    border-right: 1px solid var(--border-color-strong);
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.24);
+}
+
+.megamenu-menu-header {
+    border-bottom-color: var(--border-color-strong);
+}
+
+#megamenu-back-btn,
+.megamenu-menu-header #megamenu-menu-header-title,
+.megamenu-menu-header:focus,
+.megamenu-menu-header:hover {
+    color: var(--text-color);
+    border-color: var(--control-text-color);
+}
+
+.megamenu-menu-list li a.active,
+.megamenu-menu-list:not(.saved) li a:hover {
+    background-color: var(--item-hover-bg-color);
+    color: var(--item-hover-text-color);
+}
+
+.megamenu-menu-panel h1,
+.megamenu-menu-panel h2,
+.long-btn {
+    color: var(--text-color-strong);
+}
+
+.long-btn,
+.megamenu-menu-panel .btn {
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+}
+
+.long-btn:hover,
+.megamenu-menu-panel .btn:hover {
+    color: var(--item-hover-text-color) !important;
+    background: var(--item-hover-bg-color);
+}
+
+.megamenu-menu-panel input[type="text"],
+#recent-file-panel-search-input {
+    color: var(--text-color);
+    background: var(--code-bg-color);
+    border: 1px solid var(--border-color-strong);
+}
+
+.megamenu-menu-panel input[type="text"]:focus,
+#recent-file-panel-search-input:focus {
+    border-color: var(--focus-ring-color);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--focus-ring-color);
+}
+
+.megamenu-menu-panel table,
+.megamenu-menu-panel table tr,
+.megamenu-menu-panel table td,
+.megamenu-menu-panel table th {
+    color: var(--text-color);
+    background: transparent;
+    border-color: var(--border-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background: var(--surface-color) !important;
+}
+
+#recent-file-panel tbody tr:nth-child(2n) {
+    background: var(--bg-color) !important;
+}
+
+.megamenu-menu-panel tbody tr:hover {
+    background: var(--item-hover-bg-color) !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1),
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: var(--item-hover-text-color);
+}
+
+#recent-file-pane .dropdown-menu,
+.megamenu-menu-panel .dropdown-menu > li > a,
+#recent-file-panel-action-btn {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+}
+
+.context-menu,
+.dropdown-menu,
+#spell-check-panel,
+#footer-word-count-info,
+#sidebar-files-menu {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color-strong);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.36);
+}
+
+/*
+ * The main menu list also carries Typora's generic .dropdown-menu class,
+ * but it is an embedded part of the sidebar rather than a floating popup.
+ */
+.megamenu-menu .megamenu-menu-list {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.dropdown-menu > li > a,
+.context-menu > li > a {
+    color: var(--text-color);
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.context-menu.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+    color: var(--item-hover-text-color);
+    background: var(--item-hover-bg-color);
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: var(--border-color-strong);
+    border-color: var(--border-color-strong);
+    opacity: 1;
+}
+
+.menu-item-container a.menu-style-btn {
+    color: var(--text-color);
+    background: var(--code-inline-bg-color);
+    border-color: var(--border-color-strong);
+    box-shadow: none;
+}
+
+.menu-item-container a.menu-style-btn:hover {
+    color: var(--item-hover-text-color);
+    background: var(--item-hover-bg-color);
+}
+
+.auto-suggest-container,
+#typora-quick-open {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
+}
+
+#typora-quick-open input {
+    color: var(--text-color);
+    background: var(--code-bg-color);
+    border: 0;
+    border-bottom: 1px solid var(--border-color-strong);
+}
+
+.typora-quick-open-item,
+#typora-quick-open-item {
+    color: var(--text-color);
+    background: transparent;
+    border-color: var(--border-color);
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    color: var(--item-hover-text-color);
+    background: var(--active-file-bg-color);
+}
+
+.typora-search-spinner > div {
+    background-color: var(--primary-color);
+}
+
+#md-searchpanel,
+.md-notification-container,
+#md-notification {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+}
+
+#md-searchpanel input,
+#md-notification input {
+    color: var(--text-color);
+    background: var(--code-bg-color);
+    border-color: var(--border-color-strong);
+}
+
+.searchpanel-search-option-btn.active {
+    color: var(--item-hover-text-color);
+    background: var(--active-file-bg-color);
+}
+
+.modal-content {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.48);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--border-color);
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select,
+.modal-content .input-group-addon {
+    color: var(--text-color);
+    background: var(--code-bg-color);
+    border-color: var(--border-color-strong);
+}
+
+.modal-backdrop,
+.modal-backdrop.in {
+    background: rgba(0, 0, 0, 0.72);
+    opacity: 1;
+}
+
+.btn,
+.btn-default {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    color: var(--item-hover-text-color);
+    background: var(--item-hover-bg-color);
+    border-color: var(--focus-ring-color);
+}
+
+.btn-primary,
+.modal-content .btn-primary {
+    color: var(--primary-btn-text-color);
+    background: var(--primary-color);
+    border-color: var(--primary-btn-border-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: #ffffff;
+    background: var(--link-hover-color);
+}
+
+#ty-tooltip,
+.ty-tooltip {
+    color: var(--text-color);
+    background: var(--code-bg-color);
+    border: 1px solid var(--border-color-strong);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.38);
+}
+
+footer.ty-footer {
+    color: var(--control-text-color);
+    background: var(--bg-color);
+    border-color: var(--border-color-strong);
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count,
+.ty-show-spell-check #footer-spell-check {
+    color: var(--item-hover-text-color);
+    background: var(--item-hover-bg-color);
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    color: var(--text-color);
+    background: var(--item-hover-bg-color);
+}

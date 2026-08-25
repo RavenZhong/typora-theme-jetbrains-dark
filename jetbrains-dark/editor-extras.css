@@ -1,0 +1,146 @@
+/*
+ * Editor-adjacent UI and token classes not covered by the original theme.
+ */
+
+.ty-editor-toolbar {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color-strong);
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.36));
+    --text-color: #dfe1e5;
+}
+
+.ty-table-edit,
+.md-table-resize-popover,
+.md-table-resize-popover .popover-content,
+.code-tooltip,
+div.code-tooltip,
+.md-hover-tip .md-arrow:after,
+.popover.bottom > .arrow:after {
+    color: var(--text-color);
+    background: var(--surface-color);
+    border-color: var(--border-color-strong);
+}
+
+.md-search-hit,
+.md-search-hit * {
+    color: var(--search-select-text-color);
+    background: var(--search-select-bg-color);
+}
+
+.md-comment {
+    color: var(--code-comment);
+    opacity: 1;
+}
+
+.md-task-list-item > input {
+    accent-color: var(--primary-color);
+}
+
+.md-diagram-panel-error {
+    color: var(--code-invalid);
+}
+
+#write .md-focus .md-diagram-panel {
+    border: 1px solid var(--border-color-strong);
+}
+
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner.cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-def {
+    color: var(--code-function);
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: var(--code-string);
+}
+
+.cm-s-inner .cm-hr {
+    color: var(--border-color-strong);
+}
+
+.cm-s-inner .cm-negative {
+    color: var(--code-invalid);
+}
+
+.cm-s-inner .cm-positive {
+    color: var(--code-string);
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: var(--code-number);
+}
+
+.cm-s-inner .cm-string-2 {
+    color: var(--code-tag);
+}
+
+.cm-s-typora-default {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.cm-s-typora-default .CodeMirror-gutters {
+    color: var(--text-color-muted);
+    background: var(--code-bg-color);
+    border-color: var(--border-color-strong);
+}
+
+.cm-s-typora-default .cm-header,
+.cm-s-typora-default .cm-property {
+    color: var(--code-function);
+}
+
+.cm-s-typora-default .cm-comment,
+.cm-s-typora-default .cm-code {
+    color: var(--code-comment);
+}
+
+.cm-s-typora-default .cm-string {
+    color: var(--code-string);
+}
+
+.cm-s-typora-default .cm-atom,
+.cm-s-typora-default .cm-number {
+    color: var(--code-number);
+}
+
+.cm-s-typora-default .cm-link {
+    color: var(--code-url);
+}
+
+.cm-s-typora-default .cm-tag,
+.cm-s-typora-default .cm-keyword {
+    color: var(--code-keyword);
+}
+
+.cm-s-typora-default .cm-variable,
+.cm-s-typora-default .cm-variable-2 {
+    color: var(--code-variable);
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(38, 40, 45, 0.9);
+}
+
+.cm-s-typora-default .CodeMirror-selected,
+.cm-s-typora-default .CodeMirror-selectedtext {
+    color: var(--select-text-font-color);
+    background: var(--select-text-bg-color);
+}
+
+.cm-s-typora-default div.CodeMirror-cursor {
+    border-left: 2px solid var(--code-cursor-color);
+}
+
+[lang="mermaid"] .label,
+[lang="mermaid"] .nodeLabel,
+[lang="mermaid"] .edgeLabel {
+    font-family: var(--mermaid-font-family);
+}
